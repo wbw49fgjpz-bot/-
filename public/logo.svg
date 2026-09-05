@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="100%" height="100%">
+  <defs>
+    <style>
+      .ctc-serif {
+        font-family: "Times New Roman", "Baskerville", "Playfair Display", "Yu Mincho", serif;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  
+  <!-- T (Center, prominent) -->
+  <text x="120" y="82" font-size="78" text-anchor="middle" fill="currentColor" class="ctc-serif" letter-spacing="-2">T</text>
+  
+  <!-- Left C -->
+  <text x="66" y="80" font-size="64" text-anchor="middle" fill="currentColor" class="ctc-serif">C</text>
+  
+  <!-- Right C -->
+  <text x="174" y="80" font-size="64" text-anchor="middle" fill="currentColor" class="ctc-serif">C</text>
+  
+  <!-- House Roof: Sharp triangular gable roof (家の三角屋根) -->
+  <path 
+    d="M 24 106 L 120 74 L 216 106 L 213 112 L 120 82 L 27 112 Z" 
+    fill="currentColor" 
+  />
+  
+  <!-- Sub-eaves triangular gable trim -->
+  <path 
+    d="M 50 109 L 120 87 L 190 109 L 187 113 L 120 92 L 53 113 Z" 
+    fill="currentColor" 
+    opacity="0.85"
+  />
+  
+  <!-- Lower House/Emblem Crest (House silhouette under triangular roof) -->
+  <g transform="translate(120, 128)" fill="currentColor">
+    <!-- Traditional House frame -->
+    <rect x="-13" y="-10" width="26" height="20" fill="none" stroke="currentColor" stroke-width="2.5" rx="1" />
+    <path d="M 0 -10 L 0 10" stroke="currentColor" stroke-width="2.5" />
+    <path d="M -10 0 L 10 0" stroke="currentColor" stroke-width="2" />
+    <!-- Foundation line -->
+    <rect x="-24" y="10" width="48" height="3" rx="0.5" />
+  </g>
+</svg>

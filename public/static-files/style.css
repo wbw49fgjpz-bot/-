@@ -1,0 +1,102 @@
+/* 心誠不動産 (SHINSEI REAL ESTATE) スタイルシート */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@500;700&display=swap');
+
+:root {
+  --primary-navy: #090e17;
+  --secondary-navy: #0f172a;
+  --accent-gold: #f59e0b;
+  --accent-gold-light: #fbbf24;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --bg-light: #f8fafc;
+  --line-green: #06C755;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.font-mincho {
+  font-family: 'Shippori Mincho', serif;
+}
+
+/* スライダー */
+.hero-slider {
+  position: relative;
+  min-height: 600px;
+  background-color: var(--primary-navy);
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-slide-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: all 1s ease-in-out;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(9, 14, 23, 0.95), rgba(9, 14, 23, 0.75), rgba(9, 14, 23, 0.45));
+}
+
+/* ボタンスタイル */
+.btn-gold {
+  background: linear-gradient(135deg, var(--accent-gold-light), var(--accent-gold));
+  color: #090e17;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-gold:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.btn-line {
+  background-color: var(--line-green);
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: opacity 0.2s;
+}
+
+.btn-line:hover {
+  opacity: 0.9;
+}
+
+/* シミュレーター */
+input[type=range] {
+  accent-color: var(--accent-gold);
+}
