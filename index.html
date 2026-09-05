@@ -1,21 +1,929 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>株式会社CTC 心誠不動産 | 埼玉・鶴ヶ島・川越の不動産売買・仲介・買取</title>
-    <meta name="description" content="埼玉県鶴ヶ島市・川越・東武東上線エリアの不動産売買・仲介・買取・不動産相談。確かな専門資格と豊富な取引実績で理想の住まいをご提案。" />
-    <meta property="og:title" content="株式会社CTC 心誠不動産 | 埼玉・鶴ヶ島・川越の不動産売買・仲介・買取" />
-    <meta property="og:description" content="埼玉県鶴ヶ島市・川越・東武東上線エリアの不動産売買・仲介・買取・不動産相談。確かな専門資格と豊富な取引実績で理想の住まいをご提案。" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-100 selection:text-amber-900">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社CTC 心誠不動産 | 埼玉・鶴ヶ島・川越の不動産売却・仲介・買取</title>
+  <meta name="description" content="埼玉県鶴ヶ島市・川越・東武東上線エリアの不動産売買・仲介・買取・不動産相談。確かな建築専門資格と豊富な取引実績で理想の出口戦略と住まいをご提案。">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts（明朝体・ゴシック体） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .font-mincho { font-family: 'Shippori Mincho', serif; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-amber-200 selection:text-amber-900">
 
+  <!-- 1. トップビジネスバー -->
+  <div class="bg-slate-950 text-slate-300 text-xs border-b border-slate-800 py-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center text-[11px] sm:text-xs">
+      <div class="flex items-center gap-3">
+        <span class="text-amber-400 font-bold">埼玉県鶴ヶ島市の心誠不動産</span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:inline text-slate-400">営業時間 10:00〜20:00（定休日: 火曜日・水曜日）</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:0492775294" class="text-amber-300 font-bold hover:text-amber-200">
+          TEL 049-277-5294
+        </a>
+        <a href="https://lin.ee/9HqoExa" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#06C755] text-white text-[11px] font-bold">
+          LINE相談 ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. ヘッダーナビゲーション -->
+  <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between py-3">
+      <!-- ロゴ -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 via-amber-600 to-amber-800 p-0.5 shadow-md flex items-center justify-center">
+          <div class="w-full h-full bg-slate-950 rounded-[7px] flex items-center justify-center">
+            <span class="font-mincho font-bold text-amber-400 text-lg">心</span>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-[10px] font-bold tracking-widest text-amber-400">CTC</span>
+            <span class="text-[10px] text-slate-400">SHINSEI REAL ESTATE</span>
+          </div>
+          <div class="font-mincho text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-amber-300 transition-colors">
+            心誠不動産
+          </div>
+        </div>
+      </a>
+
+      <!-- ナビゲーションリンク -->
+      <nav class="hidden xl:flex items-center gap-6 text-xs font-semibold text-slate-200">
+        <a href="#sale" class="hover:text-amber-400 transition-colors">売却・出口戦略</a>
+        <a href="#estimate" class="hover:text-amber-400 transition-colors">かんたん査定</a>
+        <a href="#difficult" class="hover:text-amber-400 transition-colors">空き家・相続</a>
+        <a href="#search" class="hover:text-amber-400 transition-colors">物件検索</a>
+        <a href="#philosophy" class="hover:text-amber-400 transition-colors">経営理念</a>
+        <a href="#company" class="hover:text-amber-400 transition-colors">会社概要</a>
+      </nav>
+
+      <!-- 右側ボタン -->
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:brightness-105 text-slate-950 font-bold text-xs shadow-md transition-all">
+          無料相談・査定
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. ヒーローセクション ＆ スライドショー -->
+  <section id="hero" class="relative w-full bg-slate-950 overflow-hidden text-white">
+    <div class="relative min-h-[560px] sm:min-h-[620px] flex items-center">
+      <!-- 背景画像 -->
+      <div id="hero-bg" class="absolute inset-0 bg-cover bg-center transition-all duration-1000 scale-100" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/45"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/40"></div>
+
+      <!-- テキスト -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-semibold tracking-widest uppercase">
+            <span>埼玉県鶴ヶ島市 • 株式会社CTC 心誠不動産</span>
+          </div>
+          <h1 class="font-mincho text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+            住まいのこと、土地のこと。<br>
+            <span class="bg-gradient-to-r from-amber-200 via-amber-300 to-amber-100 bg-clip-text text-transparent">
+              あなたと一緒に考えます。
+            </span>
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl">
+            「いくらで売れる？」「このままでも大丈夫？」の疑問から。<br class="hidden sm:inline">
+            売却の出口戦略から空き家・相続相談、理想の住まい探しまで。利益よりもお客様を最優先する『先義先義』の精神で寄り添います。
+          </p>
+
+          <!-- 3大選択肢 -->
+          <div class="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl">
+            <a href="#sale" class="p-3.5 rounded-xl bg-slate-900/90 border border-amber-400/40 hover:border-amber-400 transition-all text-left block">
+              <div class="text-[11px] font-bold text-amber-400">売りたい・査定したい</div>
+              <div class="text-xs font-bold text-white mt-1">売却の出口戦略を見る ↗</div>
+            </a>
+            <a href="#search" class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700 hover:border-amber-400/60 transition-all text-left block">
+              <div class="text-[11px] font-bold text-amber-400">土地・住まいを探したい</div>
+              <div class="text-xs font-bold text-white mt-1">特選物件・検索へ ↗</div>
+            </a>
+            <a href="#difficult" class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700 hover:border-amber-400/60 transition-all text-left block">
+              <div class="text-[11px] font-bold text-amber-400">空き家・相続を相談</div>
+              <div class="text-xs font-bold text-white mt-1">現状のまま相談する ↗</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- スライド送り操作 -->
+      <div class="absolute bottom-6 right-6 z-20 flex items-center gap-2 bg-slate-950/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-800">
+        <button onclick="prevHeroSlide()" class="text-slate-300 hover:text-white px-1">◀</button>
+        <span id="slide-number" class="text-xs font-mono text-amber-400">1 / 4</span>
+        <button onclick="nextHeroSlide()" class="text-slate-300 hover:text-white px-1">▶</button>
+      </div>
+    </div>
+
+    <!-- 目的別ABCDEナビバー -->
+    <div class="bg-slate-900 border-y border-slate-800 py-3 relative z-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 sm:gap-3 text-center">
+          <a href="#sale" class="py-3 px-2 rounded-xl bg-slate-950 border-t-2 border-t-amber-400 border border-slate-800 text-white hover:bg-slate-800 transition-all block">
+            <span class="text-[11px] font-mono text-amber-400">01 / SELL</span>
+            <div class="text-xs sm:text-sm font-bold">売却・出口戦略</div>
+          </a>
+          <a href="#estimate" class="py-3 px-2 rounded-xl bg-slate-950 border-t-2 border-t-emerald-400 border border-slate-800 text-white hover:bg-slate-800 transition-all block">
+            <span class="text-[11px] font-mono text-emerald-400">02 / ESTIMATE</span>
+            <div class="text-xs sm:text-sm font-bold">かんたん査定相談</div>
+          </a>
+          <a href="#difficult" class="py-3 px-2 rounded-xl bg-slate-950 border-t-2 border-t-sky-400 border border-slate-800 text-white hover:bg-slate-800 transition-all block">
+            <span class="text-[11px] font-mono text-sky-400">03 / INHERIT</span>
+            <div class="text-xs sm:text-sm font-bold">空き家・相続相談</div>
+          </a>
+          <a href="#search" class="py-3 px-2 rounded-xl bg-slate-950 border-t-2 border-t-purple-400 border border-slate-800 text-white hover:bg-slate-800 transition-all block">
+            <span class="text-[11px] font-mono text-purple-400">04 / BUY</span>
+            <div class="text-xs sm:text-sm font-bold">物件を探す・購入</div>
+          </a>
+          <a href="#contact" class="col-span-2 sm:col-span-1 py-3 px-2 rounded-xl bg-gradient-to-r from-amber-500/20 to-amber-600/20 border-t-2 border-t-amber-400 border border-amber-400/40 text-amber-300 hover:bg-amber-500/30 transition-all block">
+            <span class="text-[11px] font-mono text-amber-400">05 / TALK</span>
+            <div class="text-xs sm:text-sm font-bold">無料相談・LINE</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. [売却出口戦略] 01 / 出口まで見通す不動産売却 -->
+  <section id="sale" class="py-20 bg-slate-950 text-white border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-400 text-xs font-bold tracking-widest uppercase mb-3">
+          01 / EXIT STRATEGY
+        </div>
+        <h2 class="font-mincho text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+          出口まで見通す、<br>不動産売却。
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+          売却の手法は一つではありません。「高く売りたい」「早く現金化したい」「そのまま住み続けたい」「片付けずに手放したい」。お客様の事情や手残り資金に合わせて、4つの出口戦略をご提案します。
+        </p>
+      </div>
+
+      <!-- 4つの出口タブ切り替え -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+        <button onclick="setStrategyTab('brokerage')" id="tab-brokerage" class="strategy-tab py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold border transition-all text-left bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 border-amber-400 shadow-md">
+          <div class="text-[10px] uppercase opacity-80">CASE 01</div>
+          <div class="font-bold text-sm">仲介売却（最高値を追求）</div>
+        </button>
+        <button onclick="setStrategyTab('buyout')" id="tab-buyout" class="strategy-tab py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold border transition-all text-left bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700">
+          <div class="text-[10px] uppercase opacity-80">CASE 02</div>
+          <div class="font-bold text-sm">直接買取（即時現金化）</div>
+        </button>
+        <button onclick="setStrategyTab('leaseback')" id="tab-leaseback" class="strategy-tab py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold border transition-all text-left bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700">
+          <div class="text-[10px] uppercase opacity-80">CASE 03</div>
+          <div class="font-bold text-sm">リースバック（住み続ける）</div>
+        </button>
+        <button onclick="setStrategyTab('current')" id="tab-current" class="strategy-tab py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold border transition-all text-left bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700">
+          <div class="text-[10px] uppercase opacity-80">CASE 04</div>
+          <div class="font-bold text-sm">現況有姿（片付け不要）</div>
+        </button>
+      </div>
+
+      <!-- タブ内容表示カード -->
+      <div id="strategy-card" class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 mb-16 shadow-xl">
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+          <h3 id="strat-title" class="font-mincho text-2xl font-bold text-white">仲介売却（一般市場で最高値を追求）</h3>
+          <span id="strat-speed" class="px-3 py-1 rounded-full bg-slate-800 text-amber-400 text-xs font-bold">売却期間の目安: 1〜3ヶ月</span>
+        </div>
+        <p id="strat-desc" class="text-slate-300 text-sm leading-relaxed mb-6">
+          ポータルサイト（SUUMO・at home等）や当社の顧客ネットワークを活用し、一般市場から最も条件の良い購入希望者を広く募る王道の売却手法です。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/80">
+            <div class="text-amber-400 font-bold mb-1">【メリット】</div>
+            <div id="strat-merit" class="text-slate-300">相場の最高価格・高値売却が期待できる。条件交渉の幅が広い。</div>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/80">
+            <div class="text-rose-400 font-bold mb-1">【注意点・向いている方】</div>
+            <div id="strat-demerit" class="text-slate-300">内覧対応が必要。売却までの期間に余裕があり、少しでも高く手残りを残したい方に最適。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 手残り資金シミュレーター -->
+      <div class="bg-gradient-to-br from-slate-900 to-slate-950 border-2 border-amber-500/30 rounded-2xl p-6 sm:p-10 shadow-2xl">
+        <div class="max-w-2xl mb-8">
+          <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider mb-1">SIMULATOR</div>
+          <h3 class="font-mincho text-2xl sm:text-3xl font-bold text-white">売却手残り資金シミュレーター</h3>
+          <p class="text-slate-400 text-xs sm:text-sm mt-2">
+            「売れた金額」から「ローン残債・仲介手数料・費用・税金」を引いて、最終的にお手元にいくら残るかを試算できます。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-5">
+            <div>
+              <div class="flex justify-between text-xs font-bold mb-1">
+                <span class="text-slate-300">想定売却価格</span>
+                <span id="label-price" class="text-amber-400 font-mono text-base">3,500万円</span>
+              </div>
+              <input type="range" min="500" max="10000" step="100" value="3500" id="input-price" oninput="calcProceeds()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-400">
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-bold mb-1">
+                <span class="text-slate-300">住宅ローン残債</span>
+                <span id="label-loan" class="text-slate-300 font-mono text-base">1,200万円</span>
+              </div>
+              <input type="range" min="0" max="8000" step="50" value="1200" id="input-loan" oninput="calcProceeds()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-400">
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[11px] font-bold text-slate-400 mb-1">解体・撤去費用 (万円)</label>
+                <input type="number" id="input-demolition" value="0" oninput="calcProceeds()" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white outline-none">
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold text-slate-400 mb-1">概算譲渡税・諸費用 (万円)</label>
+                <input type="number" id="input-tax" value="50" oninput="calcProceeds()" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white outline-none">
+              </div>
+            </div>
+          </div>
+
+          <!-- 計算結果ボックス -->
+          <div class="lg:col-span-5 bg-slate-950 border border-slate-800 rounded-xl p-6 text-center space-y-3">
+            <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">概算手残り資金（手元に残る現金）</div>
+            <div id="result-net" class="font-mincho text-4xl sm:text-5xl font-bold text-amber-400 font-mono">
+              +2,128万円
+            </div>
+            <div class="text-[11px] text-slate-500 pt-2 border-t border-slate-900 space-y-1">
+              <div>仲介手数料目安: <span id="calc-brokerage" class="text-slate-300">約122万円</span></div>
+              <div>※正確な税金控除（3000万特別控除等）は個別査定時に試算いたします。</div>
+            </div>
+            <a href="#contact" class="inline-block w-full py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs hover:brightness-105 transition-all mt-2">
+              この条件で無料査定を申し込む
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. [かんたん査定] 02 / おうちの面積、分かりますか？（相談文自動生成） -->
+  <section id="estimate" class="py-20 bg-white text-slate-900 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold tracking-widest uppercase mb-3">
+          02 / EASY CONSULTATION
+        </div>
+        <h2 class="font-mincho text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+          おうちの面積、分かりますか？<br>
+          まずはかんたん査定相談。
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+          最初は「物件の種類・市区町村・面積」の3項目で大丈夫です。<br class="hidden sm:inline">
+          分かる情報をまとめて、公式LINEやお電話でスムーズにご相談いただけます。
+        </p>
+        <div class="mt-4 p-4 rounded-xl bg-amber-50 border-l-4 border-amber-600 text-xs sm:text-sm text-slate-700">
+          <strong>※現在、自動での無責任な金額表示は行っていません</strong><br>
+          数字だけで機械的に算出した価格は実際の接道や建物を反映できず誤解を招くためです。入力すると<strong>LINE送信用テキストが自動作成</strong>され、担当専門家が現地と相場を確認したうえで正直な査定根拠をお届けします。
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- フォーム入力 (7 cols) -->
+        <div class="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 space-y-5">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-2">物件の種類</label>
+            <div class="grid grid-cols-3 gap-3">
+              <button onclick="setEstKind('戸建')" id="est-kind-kodate" class="est-kind-btn py-2.5 px-3 rounded-xl text-xs font-bold border bg-slate-900 text-white border-slate-900 shadow">戸建</button>
+              <button onclick="setEstKind('土地')" id="est-kind-tochi" class="est-kind-btn py-2.5 px-3 rounded-xl text-xs font-bold border bg-white text-slate-700 border-slate-200">土地</button>
+              <button onclick="setEstKind('マンション')" id="est-kind-mansion" class="est-kind-btn py-2.5 px-3 rounded-xl text-xs font-bold border bg-white text-slate-700 border-slate-200">マンション</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">市区町村</label>
+              <select id="est-city" onchange="generateConsultText()" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-xs text-slate-900 outline-none">
+                <option value="鶴ヶ島市">鶴ヶ島市</option>
+                <option value="川越市">川越市</option>
+                <option value="坂戸市">坂戸市</option>
+                <option value="東松山市">東松山市</option>
+                <option value="日高市">日高市</option>
+                <option value="入間郡毛呂山町">入間郡毛呂山町</option>
+                <option value="その他埼玉県内">その他埼玉県内</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">町名（番地不要）</label>
+              <input type="text" id="est-town" value="松ヶ丘" oninput="generateConsultText()" placeholder="例: 松ヶ丘" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-xs outline-none">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">面積 (㎡)</label>
+            <input type="number" id="est-area" value="120" oninput="generateConsultText()" placeholder="例: 120" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-xs outline-none">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">気になる事情</label>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <label class="flex items-center gap-2 p-2 bg-white rounded border border-slate-200 cursor-pointer">
+                <input type="checkbox" checked value="荷物・家具が残っている" onchange="generateConsultText()" class="est-concern"> 荷物・家具が残っている
+              </label>
+              <label class="flex items-center gap-2 p-2 bg-white rounded border border-slate-200 cursor-pointer">
+                <input type="checkbox" value="相続したまま放置している" onchange="generateConsultText()" class="est-concern"> 相続したまま放置している
+              </label>
+              <label class="flex items-center gap-2 p-2 bg-white rounded border border-slate-200 cursor-pointer">
+                <input type="checkbox" value="住宅ローン残債がある" onchange="generateConsultText()" class="est-concern"> 住宅ローン残債がある
+              </label>
+              <label class="flex items-center gap-2 p-2 bg-white rounded border border-slate-200 cursor-pointer">
+                <input type="checkbox" value="急ぎで現金化したい" onchange="generateConsultText()" class="est-concern"> 急ぎで現金化したい
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINE・メール相談文リアルタイムプレビュー (5 cols) -->
+        <div class="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-amber-400">相談文ができました</span>
+            <button onclick="copyConsultText()" class="text-xs bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded border border-slate-700 text-slate-200">
+              文面をコピー
+            </button>
+          </div>
+          <textarea id="est-result-text" readonly rows="11" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3.5 font-mono text-xs text-slate-200 leading-relaxed outline-none resize-none"></textarea>
+          
+          <div class="space-y-2 pt-2">
+            <a href="https://lin.ee/9HqoExa" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg block text-center">
+              公式LINEを開いて送信する ↗
+            </a>
+            <a href="#contact" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 block text-center">
+              メールフォームに貼り付けて送信
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. [空き家・相続] 03 / 「売れるか分からない」その不動産も、まずはお話を。 -->
+  <section id="difficult" class="py-20 bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="max-w-3xl mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-400 text-xs font-bold tracking-widest uppercase mb-3">
+          03 / PROPERTY CONSULTATION
+        </div>
+        <h2 class="font-mincho text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+          「売れるか分からない」<br>
+          その不動産も、まずはお話を。
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+          管理が行き届かない空き家。相続したまま何年も経った土地。<br class="hidden sm:inline">
+          事情があるからこそ、現状の整理から一緒に始めます。他社で難色を示された物件も歓迎します。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+        <div class="bg-slate-950 border border-slate-800 p-6 sm:p-8 rounded-2xl space-y-3">
+          <div class="text-amber-400 font-mono text-xl font-bold">01</div>
+          <h3 class="font-mincho text-xl font-bold text-white">空き家・古家付き土地</h3>
+          <p class="text-xs text-amber-200 font-semibold">そのまま売るか、手を加えるか。状態や費用を確認して検討します。</p>
+          <p class="text-xs text-slate-300 leading-relaxed">残置物（家財道具・大型家電）の処分見積もりからワンストップで対応。解体や片付けに多額の自己資金を払う前に現況渡しを比較します。</p>
+        </div>
+
+        <div class="bg-slate-950 border border-slate-800 p-6 sm:p-8 rounded-2xl space-y-3">
+          <div class="text-amber-400 font-mono text-xl font-bold">02</div>
+          <h3 class="font-mincho text-xl font-bold text-white">相続した不動産</h3>
+          <p class="text-xs text-amber-200 font-semibold">何から始めればよいか分からない方も、状況を整理するところから。</p>
+          <p class="text-xs text-slate-300 leading-relaxed">相続登記の義務化への対応や、提携司法書士・顧問税理士と連携した遺産分割、3,000万円特別控除特例の適用要件を丁寧に整理します。</p>
+        </div>
+
+        <div class="bg-slate-950 border border-slate-800 p-6 sm:p-8 rounded-2xl space-y-3">
+          <div class="text-amber-400 font-mono text-xl font-bold">03</div>
+          <h3 class="font-mincho text-xl font-bold text-white">旗竿地・狭小地・不整形地</h3>
+          <p class="text-xs text-amber-200 font-semibold">土地の形状や接道状況を確認し、物件の特性に合わせて考えます。</p>
+          <p class="text-xs text-slate-300 leading-relaxed">道路間口が狭い土地や三角形の土地も、建築基準法の道路種別・セットバックを綿密に調査し、最適な購入層や隣地交渉を見出します。</p>
+        </div>
+
+        <div class="bg-slate-950 border border-slate-800 p-6 sm:p-8 rounded-2xl space-y-3">
+          <div class="text-amber-400 font-mono text-xl font-bold">04</div>
+          <h3 class="font-mincho text-xl font-bold text-white">再建築の確認が必要な物件</h3>
+          <p class="text-xs text-amber-200 font-semibold">建築や利用の条件を調べ、売却に向けた課題を確認します。</p>
+          <p class="text-xs text-slate-300 leading-relaxed">接道義務を満たさない再建築不可物件や市街化調整区域も、43条但書許可の可能性や専門買取業者のルートを開拓して出口をご提案します。</p>
+        </div>
+      </div>
+
+      <!-- ご相談前のアドバイス -->
+      <div class="bg-gradient-to-r from-amber-500/10 via-slate-950 to-slate-950 border border-amber-400/30 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div>
+          <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">PREPARATION / ご相談前の注意点</div>
+          <h4 class="font-mincho text-lg sm:text-xl font-bold text-white">片付けや修繕の前に、まず現状をお知らせください。</h4>
+          <p class="text-xs text-slate-300 mt-1">「リフォームすべき？」「解体すべき？」と費用をかける前に、現況での売却と費用対効果を比較することが大切です。</p>
+        </div>
+        <a href="#contact" class="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs hover:brightness-105 shrink-0">
+          現状のまま無料相談する
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. 物件検索セクション -->
+  <section id="search" class="py-20 bg-slate-100 text-slate-900 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="max-w-3xl mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold tracking-widest uppercase mb-2">
+          PROPERTY SEARCH
+        </div>
+        <h2 class="font-mincho text-3xl sm:text-4xl font-bold tracking-tight">
+          埼玉・鶴ヶ島・川越エリアの特選物件
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-1">
+          新築・中古戸建、売地、マンションをお好みの条件で絞り込めます。
+        </p>
+      </div>
+
+      <!-- 検索フィルターバー -->
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">物件種別</label>
+          <select id="filter-type" onchange="renderProperties()" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs text-slate-900 outline-none">
+            <option value="すべて">すべて</option>
+            <option value="新築戸建">新築一戸建て</option>
+            <option value="中古戸建">中古一戸建て</option>
+            <option value="売地">売地（建築条件なし）</option>
+            <option value="マンション">分譲マンション</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">エリア（市区町村）</label>
+          <select id="filter-city" onchange="renderProperties()" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs text-slate-900 outline-none">
+            <option value="すべて">すべてのエリア</option>
+            <option value="鶴ヶ島市">鶴ヶ島市</option>
+            <option value="川越市">川越市</option>
+            <option value="坂戸市">坂戸市</option>
+            <option value="東松山市">東松山市</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">上限予算</label>
+          <select id="filter-price" onchange="renderProperties()" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs text-slate-900 outline-none">
+            <option value="0">上限なし</option>
+            <option value="3000">3,000万円以内</option>
+            <option value="4000">4,000万円以内</option>
+            <option value="5000">5,000万円以内</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 物件一覧グリッド -->
+      <div id="property-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- JavaScriptで描画されます -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. 経営理念（先義先義） -->
+  <section id="philosophy" class="py-20 bg-white text-slate-900 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold tracking-widest uppercase mb-3">
+          OUR PHILOSOPHY
+        </div>
+        <h2 class="font-mincho text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">経営理念</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">「正直」な業界を構築し、「働く」の常識を新しく創る。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="text-xs font-mono font-bold text-amber-700 uppercase tracking-widest mb-2">MISSION</div>
+          <h3 class="font-mincho text-2xl font-bold text-slate-900 mb-3">「正直」な業界を構築し、「働く」の常識を新しく創る。</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">情報が不透明になりがちな不動産業界において、誠実な情報開示を貫き、関わるすべての人が安心して暮らせる社会に貢献します。</p>
+        </div>
+        <div class="bg-slate-900 text-white p-8 rounded-2xl border border-slate-800 shadow-xl">
+          <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest mb-2">VISION</div>
+          <h3 class="font-mincho text-2xl font-bold text-white mb-3">正直に取引きできる環境を整え、次世代の働き方を創る。</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">古い仕組みや悪いしきたりを本気で変え、非効率な働き方をやめ、生産性と幸福度の高い次世代の不動産会社を目指します。</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <div class="font-mincho text-xl font-bold text-slate-900 mb-1">ありがとう</div>
+          <div class="text-xs font-bold text-amber-800 mb-2">過去には感謝を。現在には信頼。未来には希望を。</div>
+          <p class="text-xs text-slate-600">出会えたすべてのご縁に感謝し、信頼される仕事を全うします。</p>
+        </div>
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <div class="font-mincho text-xl font-bold text-slate-900 mb-1">挑戦</div>
+          <div class="text-xs font-bold text-slate-900 mb-2">変化を恐れない。</div>
+          <p class="text-xs text-slate-600">慣習にとらわれず、新しい働き方と情報開示に果敢に挑戦します。</p>
+        </div>
+        <div class="bg-amber-50 p-6 rounded-2xl border-2 border-amber-400 shadow-sm">
+          <div class="font-mincho text-xl font-bold text-slate-950 mb-1">先義先義（せんぎせんぎ）</div>
+          <div class="text-xs font-bold text-amber-900 mb-2">顧客を優先して、なお、お客様を優先する。</div>
+          <p class="text-xs text-slate-700">「先義後利」の後で利益を得たい思いすら超え、ギブアンドギブでお客様を最優先する当社独自の信条です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. 会社概要 -->
+  <section id="company" class="py-20 bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-400 text-xs font-bold tracking-widest uppercase mb-3">
+          COMPANY PROFILE
+        </div>
+        <h2 class="font-mincho text-3xl sm:text-4xl font-bold tracking-tight">会社概要</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 divide-y divide-slate-800 text-xs">
+          <div class="py-3 flex justify-between"><span class="text-slate-400">会社名</span><span class="font-bold text-white">株式会社CTC（心誠不動産）</span></div>
+          <div class="py-3 flex justify-between"><span class="text-slate-400">代表取締役</span><span class="font-bold text-amber-300">千原 徹心</span></div>
+          <div class="py-3 flex justify-between"><span class="text-slate-400">所在地</span><span class="text-right">〒350-2205<br>埼玉県鶴ヶ島市松ヶ丘1丁目6-6</span></div>
+          <div class="py-3 flex justify-between"><span class="text-slate-400">電話番号</span><span class="font-bold text-amber-300">049-277-5294</span></div>
+          <div class="py-3 flex justify-between"><span class="text-slate-400">メール</span><span>0000ctcctc@gmail.com</span></div>
+          <div class="py-3 flex justify-between"><span class="text-slate-400">営業時間</span><span>10:00〜20:00（火・水定休）</span></div>
+          <div class="py-3 flex justify-between"><span class="text-slate-400">資本金</span><span>900万円</span></div>
+          <div class="py-3 flex justify-between"><span class="text-slate-400">創業</span><span>平成28年（2016年）</span></div>
+          <div class="py-3 flex justify-between"><span class="text-slate-400">宅建免許</span><span>埼玉県知事（1）第25475号</span></div>
+          <div class="py-3 flex justify-between"><span class="text-slate-400">保有専門資格</span><span class="text-right text-slate-300">自然災害調査士、外壁診断士、石綿作業主任者 等</span></div>
+        </div>
+
+        <!-- 取引銀行ネットワーク -->
+        <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4">
+          <div class="text-xs font-bold text-amber-400 uppercase tracking-wider">取引銀行ネットワーク（23行）</div>
+          <p class="text-xs text-slate-300 leading-relaxed">都市銀行・地方銀行・ネット銀行との密接な連携により、金利優遇や柔軟な住宅ローン審査をバックアップいたします。</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-300">
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">みずほ銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">三菱UFJ銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">三井住友銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">りそな銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">埼玉りそな銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">武蔵野銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">群馬銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">足利銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">常陽銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">筑波銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">東和銀行</span>
+            <span class="bg-slate-900 p-2 rounded border border-slate-800">きらぼし銀行</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. お問い合わせ -->
+  <section id="contact" class="py-20 bg-white text-slate-900 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold tracking-widest uppercase mb-3">
+          LET’S TALK
+        </div>
+        <h2 class="font-mincho text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">まずは、話してみませんか。</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">「いくらで売れる？」「このままでも大丈夫？」その疑問から、一緒に考えます。</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- 左列 (5 cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-slate-950 text-white p-6 rounded-2xl border border-slate-800 shadow-xl space-y-3">
+            <div class="text-xs text-amber-400 font-bold">お電話でのご相談</div>
+            <a href="tel:0492775294" class="font-mincho text-3xl font-black text-amber-300 block">049-277-5294</a>
+            <div class="text-xs text-slate-400">10:00〜20:00（火・水定休）</div>
+          </div>
+
+          <div class="bg-[#06C755]/10 border-2 border-[#06C755]/40 rounded-2xl p-6 space-y-2">
+            <div class="font-bold text-xs text-slate-900">公式LINEで気軽に相談</div>
+            <p class="text-xs text-slate-600">写真や相談文をそのまま送信できます。</p>
+            <a href="https://lin.ee/9HqoExa" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-[#06C755] text-white font-bold text-xs flex items-center justify-center gap-2 block text-center mt-2">
+              公式LINEを開く ↗
+            </a>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex items-center justify-between">
+            <div>
+              <div class="text-xs font-bold text-slate-900">公式Instagram</div>
+              <div class="text-xs text-slate-500">@ctc_shinnsei_</div>
+            </div>
+            <a href="https://www.instagram.com/ctc_shinnsei_/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-500 text-white font-bold text-xs">
+              Instagram ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 右列: メールフォーム (7 cols) -->
+        <div class="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200">
+          <form onsubmit="handleContactSubmit(event)" class="space-y-4 text-xs">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">お名前 (必須)</label>
+              <input type="text" required placeholder="山田 太郎" class="w-full bg-white border border-slate-300 rounded-xl p-2.5 outline-none">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">メールアドレス (必須)</label>
+                <input type="email" required placeholder="example@gmail.com" class="w-full bg-white border border-slate-300 rounded-xl p-2.5 outline-none">
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">お電話番号 (必須)</label>
+                <input type="tel" required placeholder="090-1234-5678" class="w-full bg-white border border-slate-300 rounded-xl p-2.5 outline-none">
+              </div>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">ご相談内容</label>
+              <textarea id="contact-msg" rows="4" placeholder="手残り資金の試算、売却査定、空き家の相談などご自由にご記入ください" class="w-full bg-white border border-slate-300 rounded-xl p-2.5 outline-none"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs hover:brightness-105 shadow-md">
+              この内容で無料相談・査定を申し込む
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. フッター -->
+  <footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-800 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center space-y-4">
+      <div class="font-mincho text-xl font-bold text-white">株式会社CTC 心誠不動産</div>
+      <p class="text-slate-400 text-xs max-w-xl mx-auto">
+        埼玉県鶴ヶ島市松ヶ丘1丁目6-6 • TEL 049-277-5294<br>
+        宅地建物取引業免許: 埼玉県知事（1）第25475号 • 古物商許可: 埼玉県公安委員会 第431010056039号
+      </p>
+      <div class="text-[11px] text-slate-600 pt-4 border-t border-slate-900">
+        © 2016-2026 株式会社CTC 心誠不動産 (Shinsei Real Estate). All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- 12. 画面右下固定クイックバー -->
+  <div class="fixed bottom-4 right-4 z-40 flex items-center gap-2 bg-slate-950/90 border border-slate-800 p-1.5 rounded-full shadow-2xl backdrop-blur-md">
+    <a href="https://lin.ee/9HqoExa" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-full bg-[#06C755] text-white text-xs font-bold">
+      LINE相談
+    </a>
+    <a href="tel:0492775294" class="px-3.5 py-1.5 rounded-full bg-slate-900 text-amber-300 text-xs font-bold border border-slate-700">
+      049-277-5294
+    </a>
+    <a href="#contact" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-xs font-bold">
+      無料査定
+    </a>
+  </div>
+
+  <!-- JavaScript ロジック -->
+  <script>
+    // --- ヒーロースライダー ---
+    const heroImages = [
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=80',
+      'https://images.unsplash.com/photo-1541888946425-d0fbb18615f3?auto=format&fit=crop&w=2000&q=80'
+    ];
+    let currentHeroIndex = 0;
+    function updateHero() {
+      const el = document.getElementById('hero-bg');
+      if (el) el.style.backgroundImage = `url('${heroImages[currentHeroIndex]}')`;
+      const num = document.getElementById('slide-number');
+      if (num) num.innerText = `${currentHeroIndex + 1} / ${heroImages.length}`;
+    }
+    function nextHeroSlide() {
+      currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
+      updateHero();
+    }
+    function prevHeroSlide() {
+      currentHeroIndex = (currentHeroIndex - 1 + heroImages.length) % heroImages.length;
+      updateHero();
+    }
+    setInterval(nextHeroSlide, 5500);
+
+    // --- 出口戦略タブ ---
+    const strategyData = {
+      brokerage: {
+        title: '仲介売却（一般市場で最高値を追求）',
+        speed: '売却期間の目安: 1〜3ヶ月',
+        desc: 'ポータルサイト（SUUMO・at home等）や当社の顧客ネットワークを活用し、一般市場から最も条件の良い購入希望者を広く募る王道の売却手法です。',
+        merit: '相場の最高価格・高値売却が期待できる。条件交渉の幅が広い。',
+        demerit: '内覧対応が必要。売却までの期間に余裕があり、少しでも高く手残りを残したい方に最適。'
+      },
+      buyout: {
+        title: '直接買取（即時現金化・スピード引き渡し）',
+        speed: '売却期間の目安: 最短3日〜1週間',
+        desc: '当社が直接買主となり買い取ります。一般への広告・内覧対応・周囲への周知が一切不要です。',
+        merit: '契約不適合責任免除。仲介手数料0円。周囲に知られず即座に決済可能。',
+        demerit: '価格は仲介相場の約70〜80%程度。早期現金化を優先する方に最適。'
+      },
+      leaseback: {
+        title: 'リースバック（売却後も家賃で住み続ける）',
+        speed: '売却期間の目安: 2週間〜1ヶ月',
+        desc: '自宅を売却してまとまった現金を一括で手に入れた後、賃貸契約を結んでそのまま住み続けられます。',
+        merit: '引越し不要。周囲には売却したことが分からない。将来の買い戻しも相談可能。',
+        demerit: '売却後に毎月の家賃が発生する。老後資金確保や住宅ローン整理に最適。'
+      },
+      current: {
+        title: '現況有姿引き渡し（荷物・家具・古家そのまま）',
+        speed: '売却期間の目安: 相談に応じて即応',
+        desc: '古家の解体や家財道具・残置物の片付けを一切せず、現在の状態のまま引き渡せる業者や買主ルートをご案内します。',
+        merit: '解体費用（150万〜300万）や片付けの手間がゼロ。手出し自己資金なし。',
+        demerit: '価格から撤去費用分が勘案される。空き家放置・相続不動産に最適。'
+      }
+    };
+
+    function setStrategyTab(key) {
+      const data = strategyData[key];
+      document.getElementById('strat-title').innerText = data.title;
+      document.getElementById('strat-speed').innerText = data.speed;
+      document.getElementById('strat-desc').innerText = data.desc;
+      document.getElementById('strat-merit').innerText = data.merit;
+      document.getElementById('strat-demerit').innerText = data.demerit;
+
+      document.querySelectorAll('.strategy-tab').forEach(b => {
+        b.className = 'strategy-tab py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold border transition-all text-left bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700';
+      });
+      document.getElementById('tab-' + key).className = 'strategy-tab py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold border transition-all text-left bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 border-amber-400 shadow-md';
+    }
+
+    // --- 手残り資金シミュレーター ---
+    function calcProceeds() {
+      const price = parseInt(document.getElementById('input-price').value) || 0;
+      const loan = parseInt(document.getElementById('input-loan').value) || 0;
+      const demo = parseInt(document.getElementById('input-demolition').value) || 0;
+      const tax = parseInt(document.getElementById('input-tax').value) || 0;
+
+      document.getElementById('label-price').innerText = price.toLocaleString() + '万円';
+      document.getElementById('label-loan').innerText = loan.toLocaleString() + '万円';
+
+      const brokerageFee = Math.round((price * 0.03 + 6) * 1.1);
+      document.getElementById('calc-brokerage').innerText = '約' + brokerageFee.toLocaleString() + '万円';
+
+      const net = price - loan - brokerageFee - demo - tax;
+      const netEl = document.getElementById('result-net');
+      if (net >= 0) {
+        netEl.innerText = '+' + net.toLocaleString() + '万円';
+        netEl.className = 'font-mincho text-4xl sm:text-5xl font-bold text-amber-400 font-mono';
+      } else {
+        netEl.innerText = net.toLocaleString() + '万円';
+        netEl.className = 'font-mincho text-4xl sm:text-5xl font-bold text-rose-500 font-mono';
+      }
+    }
+    calcProceeds();
+
+    // --- かんたん査定相談文生成 ---
+    let currentKind = '戸建';
+    function setEstKind(k) {
+      currentKind = k;
+      document.querySelectorAll('.est-kind-btn').forEach(b => {
+        b.className = 'est-kind-btn py-2.5 px-3 rounded-xl text-xs font-bold border bg-white text-slate-700 border-slate-200';
+      });
+      if (k === '戸建') document.getElementById('est-kind-kodate').className = 'est-kind-btn py-2.5 px-3 rounded-xl text-xs font-bold border bg-slate-900 text-white border-slate-900 shadow';
+      if (k === '土地') document.getElementById('est-kind-tochi').className = 'est-kind-btn py-2.5 px-3 rounded-xl text-xs font-bold border bg-slate-900 text-white border-slate-900 shadow';
+      if (k === 'マンション') document.getElementById('est-kind-mansion').className = 'est-kind-btn py-2.5 px-3 rounded-xl text-xs font-bold border bg-slate-900 text-white border-slate-900 shadow';
+      generateConsultText();
+    }
+
+    function generateConsultText() {
+      const city = document.getElementById('est-city').value;
+      const town = document.getElementById('est-town').value || '（町名未定）';
+      const area = document.getElementById('est-area').value || '0';
+      const areaTsubo = Math.round((parseFloat(area) || 0) * 0.3025);
+
+      const concerns = [];
+      document.querySelectorAll('.est-concern:checked').forEach(c => {
+        concerns.push('・' + c.value);
+      });
+
+      const txt = `【心誠不動産 かんたん査定相談】
+-----------------------------
+■ 物件種別: ${currentKind}
+■ 所在地: 埼玉県${city} ${town}
+■ 敷地・専有面積: ${area}㎡（約${areaTsubo}坪）
+■ 気になる事情・ご要望:
+${concerns.length > 0 ? concerns.join('\n') : '・特になし'}
+-----------------------------
+上記物件について、売却・買取の可能性や査定価格、手残り資金について相談したいです。よろしくお願いいたします。`;
+
+      document.getElementById('est-result-text').value = txt;
+    }
+    generateConsultText();
+
+    function copyConsultText() {
+      const val = document.getElementById('est-result-text').value;
+      navigator.clipboard.writeText(val);
+      alert('相談文をクリップボードにコピーしました！LINEやメールに貼り付けてご利用ください。');
+    }
+
+    // --- 物件リスト表示 ---
+    const propertiesData = [
+      {
+        title: '鶴ヶ島市松ヶ丘 邸宅仕様の美築中古戸建',
+        type: '中古戸建',
+        price: 3480,
+        city: '鶴ヶ島市',
+        station: '東武東上線 鶴ヶ島駅 徒歩14分',
+        layout: '4LDK+S',
+        land: '135.50㎡',
+        badge: '即入居可',
+        image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        title: '川越市新宿町 南道路の陽だまり新築一戸建て',
+        type: '新築戸建',
+        price: 4280,
+        city: '川越市',
+        station: 'JR・東武 川越駅 徒歩12分',
+        layout: '4LDK',
+        land: '120.40㎡',
+        badge: '仲介手数料優遇',
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        title: '坂戸市千代田 建築条件なし ゆとりの整形地45坪',
+        type: '売地',
+        price: 1880,
+        city: '坂戸市',
+        station: '東武東上線 若葉駅 徒歩16分',
+        layout: '建築条件なし',
+        land: '150.25㎡ (45.45坪)',
+        badge: '自由設計可',
+        image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        title: '東松山市松葉町 リノベーション済み駅近マンション',
+        type: 'マンション',
+        price: 2180,
+        city: '東松山市',
+        station: '東武東上線 東松山駅 徒歩6分',
+        layout: '3LDK',
+        land: '専有 72.40㎡',
+        badge: '家具付き',
+        image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'
+      }
+    ];
+
+    function renderProperties() {
+      const type = document.getElementById('filter-type').value;
+      const city = document.getElementById('filter-city').value;
+      const price = parseInt(document.getElementById('filter-price').value) || 0;
+
+      const filtered = propertiesData.filter(p => {
+        if (type !== 'すべて' && p.type !== type) return false;
+        if (city !== 'すべて' && p.city !== city) return false;
+        if (price > 0 && p.price > price) return false;
+        return true;
+      });
+
+      const container = document.getElementById('property-grid');
+      container.innerHTML = filtered.map(p => `
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-cover bg-center" style="background-image: url('${p.image}')">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-900/80 text-amber-400 font-bold text-xs">${p.type}</span>
+              <span class="absolute top-3 right-3 px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-bold text-[10px]">${p.badge}</span>
+            </div>
+            <div class="p-5 space-y-2">
+              <div class="font-mincho text-2xl font-bold text-amber-700 font-mono">${p.price.toLocaleString()}万円</div>
+              <h4 class="font-bold text-slate-900 text-sm">${p.title}</h4>
+              <div class="text-xs text-slate-600">${p.station}</div>
+              <div class="pt-2 border-t border-slate-100 flex justify-between text-xs text-slate-500">
+                <span>間取り: ${p.layout}</span>
+                <span>敷地: ${p.land}</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <a href="#contact" onclick="inquireProp('${p.title}')" class="block w-full text-center py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition-colors">
+              この物件のお問い合わせ・内覧希望
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+    renderProperties();
+
+    function inquireProp(title) {
+      document.getElementById('contact-msg').value = `【物件内覧希望】\n物件名: ${title}\n詳しい資料や現地案内を希望します。`;
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      alert('お問い合わせありがとうございます。担当者より24時間以内にご連絡いたします。');
+    }
+  </script>
+
+</body>
+</html>
